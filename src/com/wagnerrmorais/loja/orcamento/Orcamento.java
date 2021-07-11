@@ -1,6 +1,7 @@
 package com.wagnerrmorais.loja.orcamento;
 
 import com.wagnerrmorais.loja.orcamento.situacao.EmAnalise;
+import com.wagnerrmorais.loja.orcamento.situacao.Finalizado;
 import com.wagnerrmorais.loja.orcamento.situacao.SituacaoOrcamento;
 
 import java.math.BigDecimal;
@@ -48,5 +49,9 @@ public class Orcamento {
 
     public void setSituacao(SituacaoOrcamento situacao) {
         this.situacao = situacao;
+    }
+
+    public boolean isFinalizado() {
+        return situacao instanceof Finalizado;
     }
 }
