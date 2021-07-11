@@ -27,4 +27,13 @@ public class Pedido {
     public Orcamento getOrcamento() {
         return orcamento;
     }
+
+    @Override
+    public String toString() {
+        return "Pedido{" +
+                "cliente='" + cliente + '\'' +
+                ", data=" + data +
+                ", orcamento=" + orcamento +
+                '}';
+    }
 }
