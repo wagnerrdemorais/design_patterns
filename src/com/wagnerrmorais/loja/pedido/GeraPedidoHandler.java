@@ -1,5 +1,6 @@
 package com.wagnerrmorais.loja.pedido;
 
+import com.wagnerrmorais.loja.orcamento.ItemOrcamento;
 import com.wagnerrmorais.loja.orcamento.Orcamento;
 import com.wagnerrmorais.loja.pedido.acao.AcaoAposGerarPedido;
 
@@ -16,7 +17,8 @@ public class GeraPedidoHandler {
     }
 
     public void execute(GeraPedido dados) {
-        Orcamento orcamento = new Orcamento(dados.getValorOrcamento(), dados.getQuantidadeItens());
+        Orcamento orcamento = new Orcamento();
+        orcamento.adicionarItem(new ItemOrcamento(dados.getValorOrcamento()));
         Pedido pedido = new Pedido(dados.getCliente(), LocalDateTime.now(), orcamento);
 
         acoes.forEach(acao -> acao.executarAcao(pedido));
