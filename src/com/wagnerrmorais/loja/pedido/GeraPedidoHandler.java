@@ -11,13 +11,13 @@ import java.util.List;
 public class GeraPedidoHandler {
 
     //observer example
-    private List<AcaoAposGerarPedido> acoes;
+    private final List<AcaoAposGerarPedido> acoes;
 
     public GeraPedidoHandler(List<AcaoAposGerarPedido> acoes) {
         this.acoes = acoes;
     }
 
-
+    //facade example
     public void execute(GeraPedido dados) {
         Orcamento orcamento = new Orcamento();
         orcamento.adicionarItem(new ItemOrcamento(dados.getValorOrcamento()));

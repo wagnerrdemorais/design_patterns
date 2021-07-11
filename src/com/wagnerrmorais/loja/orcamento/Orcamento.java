@@ -12,9 +12,10 @@ public class Orcamento implements Orcavel {
 
     private BigDecimal valor;
     private SituacaoOrcamento situacao;
-    private List<Orcavel> itens;
+    private final List<Orcavel> itens;
 
-    public  Orcamento() {
+    public Orcamento() {
+
         this.valor = BigDecimal.ZERO;
         this.itens = new ArrayList<>();
         this.situacao = new EmAnalise();
@@ -39,6 +40,11 @@ public class Orcamento implements Orcavel {
 
     @Override
     public BigDecimal getValor() {
+        try {
+            Thread.sleep(2000L);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return valor;
     }
 
