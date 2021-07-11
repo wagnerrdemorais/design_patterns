@@ -6,6 +6,7 @@ import com.wagnerrmorais.loja.pedido.acao.AcaoAposGerarPedido;
 import java.time.LocalDateTime;
 import java.util.List;
 
+//exemplo observer
 public class GeraPedidoHandler {
 
     private List<AcaoAposGerarPedido> acoes;

@@ -2,6 +2,7 @@ package com.wagnerrmorais.loja.pedido;
 
 import java.math.BigDecimal;
 
+//exemplo command
 public class GeraPedido {
 
     private String cliente;

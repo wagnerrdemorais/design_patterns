@@ -4,7 +4,7 @@ import com.wagnerrmorais.loja.DomainException;
 import com.wagnerrmorais.loja.orcamento.Orcamento;
 
 import java.math.BigDecimal;
-
+//exemplo State
 public abstract class SituacaoOrcamento {
 
     public BigDecimal calcularValorDescontoExtra(Orcamento orcamento) {

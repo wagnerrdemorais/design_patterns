@@ -1,8 +1,6 @@
 package com.wagnerrmorais.loja;
 
 import com.wagnerrmorais.loja.desconto.CalculadoraDeDescontos;
-import com.wagnerrmorais.loja.imposto.CalculadoraDeImpostos;
-import com.wagnerrmorais.loja.imposto.ISS;
 import com.wagnerrmorais.loja.orcamento.Orcamento;
 
 import java.math.BigDecimal;
