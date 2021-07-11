@@ -5,6 +5,7 @@ import com.wagnerrmorais.loja.orcamento.Orcamento;
 import com.wagnerrmorais.loja.orcamento.RegistroDeOrcamento;
 
 import java.math.BigDecimal;
+
 //Adapter example
 public class TestesAdapter {
 

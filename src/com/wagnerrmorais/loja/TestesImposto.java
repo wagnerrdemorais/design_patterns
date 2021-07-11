@@ -6,12 +6,13 @@ import com.wagnerrmorais.loja.imposto.ISS;
 import com.wagnerrmorais.loja.orcamento.Orcamento;
 
 import java.math.BigDecimal;
-//Decorator example
-public class TestesImpostos {
+
+public class TestesImposto {
 
     public static void main(String[] args) {
         Orcamento orcamento = new Orcamento(new BigDecimal("100"), 1);
-        CalculadoraDeImpostos calculadora = new CalculadoraDeImpostos();
-        System.out.println(calculadora.calcular(orcamento, new ISS(new ICMS(null))));
+        CalculadoraDeImpostos calculadoraDeImpostos = new CalculadoraDeImpostos();
+
+        System.out.println(calculadoraDeImpostos.calcular(orcamento, new ISS(new ICMS(null))));
     }
 }
