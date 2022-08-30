@@ -10,3 +10,4 @@
 /.gradle/*
 /.idea/*
 /target/*
+/com.wagnerrdemorais.design_patterns.iml

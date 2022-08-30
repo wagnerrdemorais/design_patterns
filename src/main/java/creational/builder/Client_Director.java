@@ -7,11 +7,13 @@ import creational.builder.abstract_builder.UserWebDTOBuilder;
 import creational.builder.inner_class_builder.PersonDTO;
 
 import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * Director role of builder
  */
-public class Client {
+public class Client_Director {
 
     public static void main(String[] args) {
         User user = createUser();
@@ -29,6 +31,13 @@ public class Client {
                 .build();
 
         System.out.println(personDTO);
+
+        //Example of builder pattern in Java 8
+        Calendar.Builder calendarBuilder = new Calendar.Builder();
+        calendarBuilder.setWeekDate(3,3, 3);
+        calendarBuilder.setLocale(Locale.getDefault());
+        Calendar calendar = calendarBuilder.build();
+        System.out.println("Built calendar> " + calendar);
     }
 
     private static UserDTO directBuildUserDTO(UserDTOBuilder builder, User user) {
