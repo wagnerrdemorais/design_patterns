@@ -12,6 +12,29 @@ import java.util.Locale;
 
 /**
  * Director role of builder
+ * <p>
+ * In the builder pattern, we have four different roles, which are:
+ * <p>
+ * Product= We want to create objects of this class in our builder.
+ * <p>
+ * Builder/Concrete Builder= Defines methods to build parts of our final object, one part at a time
+ * also provides method to build the final object, as well as an optional method that we can use to get
+ * the final object of the object. - Can be implemented as an interface or abstract class, as well as inner class.
+ * <p>
+ * Director= Knows how to user the builder class, know the steps and sequence in order to build the final object.
+ * It is rarely implemented as a separated class, usually the class who uses the builder plays the role of Director
+ * <p>
+ * The builder patter is used usually when there is an object with a complex constructor, or an object that is built
+ * in multiple steps.
+ * <p>
+ * The StringBuilder can be used as an example of builder design pattern, however, it does not conform 100% with the
+ * GOF definition.
+ * <p>
+ * A Great example of this pattern is the java.util.Calendar.Builder that provides methods that allows us to build
+ * the Calendar.
+ * <p>
+ * A problem that may occur when using builder design pattern is that sometimes the build object may have some missing
+ * properties, if required properties are missing, build method should provide suitable defaults, or throw exception.
  */
 public class Client_Director {
 
@@ -34,7 +57,7 @@ public class Client_Director {
 
         //Example of builder pattern in Java 8
         Calendar.Builder calendarBuilder = new Calendar.Builder();
-        calendarBuilder.setWeekDate(3,3, 3);
+        calendarBuilder.setWeekDate(3, 3, 3);
         calendarBuilder.setLocale(Locale.getDefault());
         Calendar calendar = calendarBuilder.build();
         System.out.println("Built calendar> " + calendar);
