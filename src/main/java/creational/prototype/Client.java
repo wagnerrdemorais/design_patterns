@@ -2,8 +2,15 @@ package creational.prototype;
 
 /**
  * There are two ways to implement prototype, with shallow or deep copy,
- * with the deep copy, if there are immutable objects as part of the object state, then shallow copy can be use,
+ * While copying, if there are immutable objects as part of the object state, then shallow copy can be use,
  * however, when there are mutable objects as part of the state of the object, then the deep copy might be used.
+ *
+ * Shallow copies duplicate as little as possible, for example, a shallow copy of a collection is a copy of the
+ * collection structure, not the elements, with shallow copy, two collections share the individual elements.
+ *
+ * Deep copies duplicate everything. A deep copy of a collection is tro collections with all the elements in the original
+ * collection duplicated.
+ *
  * <p>
  * its a good practice to reset the mutable state to allow the subclasses to initialize themselves.
  * <p>
@@ -16,6 +23,9 @@ package creational.prototype;
  *
  * A prototype registry is a class where in you can register various prototypes witch other code can access to clone out
  * instances. This solves the issue of getting access to initial instance.
+ *
+ * The Object.clone() is an example of prototype. The default clone operation will only perform the shallow copy,
+ * if a deep copy is needed, tou must implement it.
  */
 public class Client {
 
